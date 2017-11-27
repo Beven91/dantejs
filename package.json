@@ -1,0 +1,35 @@
+{
+  "description": "链尚网通用库",
+  "devDependencies": {
+    "browser-sync": "^2.17.5",
+    "chai": "^3.5.0",
+    "grunt": "^1.0.1",
+    "grunt-browserify": "^5.0.0",
+    "grunt-contrib-clean": "^0.7.0",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-jshint": "^0.12.0",
+    "grunt-contrib-uglify": "^0.11.0",
+    "load-grunt-tasks": "^3.5.2",
+    "mocha": "^3.1.2",
+    "watson-doc": "^1.1.0",
+    "webpack": "^1.13.1",
+    "yargs": "^6.3.0"
+  },
+  "keywords": [
+    "common",
+    "utility",
+    "api"
+  ],
+  "license": "MIT",
+  "main": "./src/index.js",
+  "name": "dantejs",
+  "repository": {
+    "type": "git"
+  },
+  "scripts": {
+    "build": "grunt build",
+    "doc": "watson-doc | browser-sync start --server ./docs/ --index ./index.html",
+    "test": "mocha"
+  },
+  "version": "1.1.14"
+}
