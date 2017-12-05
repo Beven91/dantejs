@@ -458,7 +458,7 @@ ValidatorLibraryClass.prototype.idCard = function(value, message, params) {
         for (var i = 0, k = sumNumbers.length; i < k; i++) {
             sum = sum + Number(value[i]) * sumNumbers[i];
         }
-        return verfifyChars[(sum % 11)] === value[17];
+        r = verfifyChars[(sum % 11)] === value[17];
     } else {
         r = false;
     }
