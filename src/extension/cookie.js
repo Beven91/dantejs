@@ -17,7 +17,8 @@ var Arrays = require('../base/array.js');
  * Cookie解析构造函数
  * @constructor
  */
-function CookieParser() {
+function CookieParser(encode) {
+    this.encode = encode !==false;
     initParser.apply(this, arguments);
 }
 
@@ -55,7 +56,12 @@ CookieParser.prototype.setCookie = function(name, v, expires, path) {
         expires = expires.toGMTString();
     }
     name = Strings.trim(name)
-    window.document.cookie = Strings.format("{0}={1};expires={2};path={3}", name, encodeURI(v), expires, (path || ""));
+    v = this.encode ? encodeURI(v):v;
+    if(expires){
+      window.document.cookie = Strings.format("{0}={1};expires={2};path={3}", name, v, expires, (path || ""));
+    }else{
+      window.document.cookie = Strings.format("{0}={1};path={2}", name, v, (path || ""));
+    }
     this[name] = v;
     this.__cookies[name.toLowerCase()] = v;
 }
@@ -98,7 +104,8 @@ function initParser(docOrCookie) {
     for (var i = 0, k = cookieKvs.length; i < k; i++) {
         kv = cookieKvs[i].split('=');
         name = Strings.trim(kv.shift());
-        v = decodeURI(trimQuotCookieParamValue(kv.join('=')));
+        v = (trimQuotCookieParamValue(kv.join('=')));
+        v = this.encode ? decodeURI(v):v;
         cookies[name.toLowerCase()] = v;
         if (Strings.isBlank(v)) {
             continue;
