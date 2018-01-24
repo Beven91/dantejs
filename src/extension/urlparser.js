@@ -30,12 +30,13 @@ Base.driver(UrlParserLibraryClass);
  * 名称：解析指定url
  */
 UrlParserLibraryClass.prototype.parse = function(url) {
-    url = (url || '').toString().split('#')[0] || "";
+    var parts = (url || '').toString().split('#');
+    url = parts[0] || "";
     var kvs = url.split('?');
     url = kvs.shift();
     var queryParams = kvs.join('?');
-    var fragments = url.match(/(\w+\:)\/\/(([\w,\-]+(\.|))+)(:\d+|)((\/.+)|)/) || [];
-    var attributes = ['href', 'protocol', 'host', null, null, 'port', 'pathname'];
+    var fragments = url.match(/((\w+\:)|\/\/)\/\/(([\w,\-]+(\.|))+)(:\d+|)((\/.+)|)/) || [];
+    var attributes = ['href', 'protocol',null,'host', null, null, 'port', 'pathname'];
     var attr = null;
     for (var i = 0, k = attributes.length; i < k; i++) {
         attr = attributes[i];
@@ -46,6 +47,7 @@ UrlParserLibraryClass.prototype.parse = function(url) {
     if (fragments.length < 1) {
         this.pathname = url;
     }
+    this.hash = parts[1]||"";
     this.url = (url);
     this.port = this.port.replace(":", "");
     var kv = (this.pathname || "").split('?');
@@ -116,8 +118,9 @@ UrlParserLibraryClass.prototype.toString = function(ignoreEmpty) {
     if (!Strings.isBlank(this.port)) {
         port = ":" + this.port;
     }
+    var hash = Strings.isBlank(this.hash)?'':'#'+this.hash;
     var sp = this.protocol ? "//" : "";
-    return Strings.format("{0}{1}{2}{3}{4}{5}", this.protocol, sp, this.host, port, this.pathname, this.toParamString(ignoreEmpty));
+    return Strings.format("{0}{1}{2}{3}{4}{5}{6}", this.protocol, sp, this.host, port, this.pathname, this.toParamString(ignoreEmpty),hash);
 }
 
 //引用附加

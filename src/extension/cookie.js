@@ -56,11 +56,11 @@ CookieParser.prototype.setCookie = function(name, v, expires, path) {
         expires = expires.toGMTString();
     }
     name = Strings.trim(name)
-    v = this.encode ? encodeURI(v):v;
+    var cv = this.encode ? encodeURI(v):v;
     if(expires){
-      window.document.cookie = Strings.format("{0}={1};expires={2};path={3}", name, v, expires, (path || ""));
+      window.document.cookie = Strings.format("{0}={1};expires={2};path={3}", name, cv, expires, (path || ""));
     }else{
-      window.document.cookie = Strings.format("{0}={1};path={2}", name, v, (path || ""));
+      window.document.cookie = Strings.format("{0}={1};path={2}", name, cv, (path || ""));
     }
     this[name] = v;
     this.__cookies[name.toLowerCase()] = v;
