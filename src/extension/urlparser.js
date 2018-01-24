@@ -48,6 +48,7 @@ UrlParserLibraryClass.prototype.parse = function(url) {
         this.pathname = url;
     }
     this.hash = parts[1]||"";
+    this.hash = Strings.isBlank(this.hash) ? "":'#'+this.hash;
     this.url = (url);
     this.port = this.port.replace(":", "");
     var kv = (this.pathname || "").split('?');
@@ -118,9 +119,8 @@ UrlParserLibraryClass.prototype.toString = function(ignoreEmpty) {
     if (!Strings.isBlank(this.port)) {
         port = ":" + this.port;
     }
-    var hash = Strings.isBlank(this.hash)?'':'#'+this.hash;
     var sp = this.protocol ? "//" : "";
-    return Strings.format("{0}{1}{2}{3}{4}{5}{6}", this.protocol, sp, this.host, port, this.pathname, this.toParamString(ignoreEmpty),hash);
+    return Strings.format("{0}{1}{2}{3}{4}{5}{6}", this.protocol, sp, this.host, port, this.pathname, this.toParamString(ignoreEmpty),this.hash);
 }
 
 //引用附加
