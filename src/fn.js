@@ -5,7 +5,6 @@
  *******************************************************/
 var Base = require('./base.js');
 var Type = require('./type.js');
-var Strings = require('./string.js');
 
 /**
  * @module Function
