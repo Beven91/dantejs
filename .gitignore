@@ -1,0 +1,12 @@
+out/
+dist/
+target/
+debug.log
+__tests__/
+node_modules/
+bower_modules/
+npm-debug.log
+workspace.xml
+Thumbs.db
+spliter.json
+package-lock.json

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>dantejs源码-src/index.js</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no"  />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-capabale", content="yes"/>
+    <link href="../css/layout.css" type="text/css" rel="stylesheet" />
+	<link href="../font/font.css" type="text/css" rel="stylesheet" />
+    <link href="../css/prettify-jsdoc.css" type="text/css" rel="stylesheet" />
+    <link href="../css/prettify-tomorrow.css" type="text/css" rel="stylesheet" />
+</head>
+<body class="layout layout-source">
+<div class="layout-header">
+    <h3 class="title">index.js<span class="version"></span></h3>
+    <ul class="nav">
+        
+    </ul>
+</div>
+<div class="layout-content">
+    <div class="file-source">
+    <div class="file-header">src/index.js</div>
+    <pre class="prettyprint source linenums">/**
+ * 名称:链尚基础API主入口
+ */
+
+//公布引用
+module.exports = {
+    Base: require('./base/base.js'),
+    Type: require('./base/type.js'),
+    String: require('./base/string.js'),
+    Date: require('./base/date.js'),
+    Array: require('./base/array.js'),
+    Fn: require('./base/function.js'),
+    Number: require('./base/number.js'),
+    List: require('./base/list.js'),
+    BrowserVersion: require('./extension/browser.js'),
+    CookieParser: require('./extension/cookie.js'),
+    UrlParser: require('./extension/urlparser.js'),
+    EventEmitter: require('./extension/emitter.js'),
+    Timer: require('./extension/timer.js'),
+    Promise: require('./extension/promise.js'),
+    QueuePool: require('./extension/pool.js'),
+    Validator: require('./extension/validator.js')
+}</pre>
+    </div>
+</div>
+<script type="text/javascript" src="../scripts/prettify.js"></script>
+<script type="text/javascript" src="../scripts/lang-css.js"></script>
+<script> prettyPrint(); </script>
+<script type="text/javascript" src="../scripts/linenumber.js"></script>
+</body>
+</html>
+

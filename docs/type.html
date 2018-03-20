@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>dantejs文档</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no"  />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-capabale", content="yes"/>
+    <link href="css/layout.css" type="text/css" rel="stylesheet" />
+	<link href="font/iconfont.css" type="text/css" rel="stylesheet" />
+    <link href="css/prettify-jsdoc.css" type="text/css" rel="stylesheet" />
+    <link href="css/prettify-tomorrow.css" type="text/css" rel="stylesheet" />
+</head>
+<body class="layout">
+<div class="layout-header">
+        
+        
+		<h3 class="title">dantejs通用库API库<span class="version"> (1.1.20) &nbsp;&nbsp;</span></h3>
+		<ul class="nav">
+            
+		</ul>
+	</div>
+	<div class="layout-left">
+		<div class="manifest">
+			<a class="link classify icon">&#xf0025;API列表</a>
+            
+                <a class="link " id="Array" href="array.html">Array</a>
+            
+                <a class="link " id="Base" href="base.html">Base</a>
+            
+                <a class="link " id="Date" href="date.html">Date</a>
+            
+                <a class="link " id="Function" href="function.html">Function</a>
+            
+                <a class="link " id="List" href="list.html">List</a>
+            
+                <a class="link " id="Number" href="number.html">Number</a>
+            
+                <a class="link " id="String" href="string.html">String</a>
+            
+                <a class="link current" id="Type" href="type.html">Type</a>
+            
+                <a class="link " id="Browser" href="browser.html">Browser</a>
+            
+                <a class="link " id="CookieParser" href="cookie.html">CookieParser</a>
+            
+                <a class="link " id="EventEmitter" href="emitter.html">EventEmitter</a>
+            
+                <a class="link " id="QueuePool" href="pool.html">QueuePool</a>
+            
+                <a class="link " id="PromiseA" href="promise.html">PromiseA</a>
+            
+                <a class="link " id="Timer" href="timer.html">Timer</a>
+            
+                <a class="link " id="UrlParser" href="urlparser.html">UrlParser</a>
+            
+                <a class="link " id="Validator" href="validator.html">Validator</a>
+            
+                <a class="link " id="index.js" href="index.html">index.js</a>
+            
+		</div>
+	</div>
+	<div class="layout-right">
+        <div class="module">
+    <h1 class="title">
+    <i class="circle module" title="Module">M</i>
+    Type<span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/type.js.html">type.js</a>
+        </span>
+    </h1>
+    
+    <div class="description block">
+        <hr />
+<p>名称：链尚网通用库文件：类型检测工具<br />
+日期：2016-10-27<br />
+版本：0.0.1<br />
+描述：主要提供js基础数据类型的检测</p>
+<hr />
+    </div>
+    
+    <div class="methods">
+        
+        
+        
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    isType
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/type.js.html#line22">type.js,line:22</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称：指定传入值是否为指定类型</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>obj</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>待检测的数据</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>type</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>目标类型</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>    var Dante = require('dantejs');
+     Dante.Type.isType('beven','String'); //&gt; true
+     Dante.Type.isType(10,'Number'); //&gt; true</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    nameType
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/type.js.html#line36">type.js,line:36</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称：获取指定值得类型名称 例如：var num=1; 返回Number</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>obj</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>值</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>    var Dante = require('dantejs');
+     Dante.Type.nameType('beven'); //&gt;'String'
+     Dante.Type.nameType(10); //&gt; 'Number'</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    isClass
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/type.js.html#line49">type.js,line:49</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称：判断传入对象是否为指定类型的类，或者指定类型的实例</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>obj</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>待检测实例</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>targetClass</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>目标类型</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>    var Dante = require('dantejs');
+    Dante.Type.isClass(obj,SuperClass); //&gt; true/false
+    Dante.Type.isClass(SubClass,SuperClass); //&gt; true/false</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    isArray
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/type.js.html#line69">type.js,line:69</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称：检测传入对象是否为数组类型</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>obj</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>待检测对象</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>    var Dante = require('dantejs');
+     Dante.Type.isArray('beven'); //&gt; false
+     Dante.Type.isArray([1,2,3]); //&gt; true</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    isFunction
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/type.js.html#line82">type.js,line:82</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称：检测传入对象是否为函数类型</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>obj</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>待检测对象</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>    var Dante = require('dantejs');
+     Dante.Type.isFunction('beven'); //&gt; false
+     Dante.Type.isFunction(function(){}); //&gt; true</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    isObject
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/type.js.html#line95">type.js,line:95</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称：检测传入对象是否为Object类型</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>obj</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>待检测对象</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>    var Dante = require('dantejs');
+     Dante.Type.isObject('beven'); //&gt; false
+     Dante.Type.isObject({}); //&gt; true</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    isBoolean
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/type.js.html#line108">type.js,line:108</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称：检测传入对象是否为Boolean类型</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>obj</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>待检测对象</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>    var Dante = require('dantejs');
+    Dante.Type.isBoolean(true); //&gt; true
+    Dante.Type.isBoolean(false); //&gt; true
+    Dante.Type.isBoolean(0); //&gt; false</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    isDate
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/type.js.html#line122">type.js,line:122</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称：检测传入对象是否为Date类型</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>obj</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>待检测对象</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>    var Dante = require('dantejs');
+    Dante.Type.isDate(''); //&gt; false
+    Dante.Type.isDate(new Date()); //&gt; true</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    isString
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/type.js.html#line135">type.js,line:135</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称：检测传入对象是否为String类型</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>obj</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>待检测对象</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>    var Dante = require('dantejs');
+    Dante.Type.isString(''); //&gt; true
+    Dante.Type.isString(new Date()); //&gt; false</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    isNumber
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/type.js.html#line148">type.js,line:148</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称：检测传入对象是否为Nummber类型</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>obj</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>待检测对象</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>    var Dante = require('dantejs');
+    Dante.Type.isNumber(0); //&gt; true
+    Dante.Type.isNumber('0'); //&gt; false</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    isNnObject
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/type.js.html#line161">type.js,line:161</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称:检测传入参数 是否为object类型,并且不是null</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>obj</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>待检测的对象</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>    var Dante = require('dantejs');
+    Dante.Type.isNnObject(null); //&gt; false
+    Dante.Type.isNnObject({}); //&gt; true</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+    </div>
+</div> 
+	</div>
+    <script type="text/javascript" src="scripts/prettify.js"></script>
+    <script type="text/javascript" src="scripts/lang-css.js"></script>
+    <script type="text/javascript" src="scripts/doc.js"></script>
+    <script> prettyPrint(); </script>
+</body>
+</html>
+

@@ -4,7 +4,7 @@
  * 版本：0.0.1
  * 描述：判断当前浏览器类型以及版本的探测工具
  *******************************************************/
-var Base = require('../base/base.js');
+var Base = require('./base.js');
 
 var inNavigator = {};
 

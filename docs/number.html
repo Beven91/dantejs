@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>dantejs文档</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no"  />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-capabale", content="yes"/>
+    <link href="css/layout.css" type="text/css" rel="stylesheet" />
+	<link href="font/iconfont.css" type="text/css" rel="stylesheet" />
+    <link href="css/prettify-jsdoc.css" type="text/css" rel="stylesheet" />
+    <link href="css/prettify-tomorrow.css" type="text/css" rel="stylesheet" />
+</head>
+<body class="layout">
+<div class="layout-header">
+        
+        
+		<h3 class="title">dantejs通用库API库<span class="version"> (1.1.20) &nbsp;&nbsp;</span></h3>
+		<ul class="nav">
+            
+		</ul>
+	</div>
+	<div class="layout-left">
+		<div class="manifest">
+			<a class="link classify icon">&#xf0025;API列表</a>
+            
+                <a class="link " id="Array" href="array.html">Array</a>
+            
+                <a class="link " id="Base" href="base.html">Base</a>
+            
+                <a class="link " id="Date" href="date.html">Date</a>
+            
+                <a class="link " id="Function" href="function.html">Function</a>
+            
+                <a class="link " id="List" href="list.html">List</a>
+            
+                <a class="link current" id="Number" href="number.html">Number</a>
+            
+                <a class="link " id="String" href="string.html">String</a>
+            
+                <a class="link " id="Type" href="type.html">Type</a>
+            
+                <a class="link " id="Browser" href="browser.html">Browser</a>
+            
+                <a class="link " id="CookieParser" href="cookie.html">CookieParser</a>
+            
+                <a class="link " id="EventEmitter" href="emitter.html">EventEmitter</a>
+            
+                <a class="link " id="QueuePool" href="pool.html">QueuePool</a>
+            
+                <a class="link " id="PromiseA" href="promise.html">PromiseA</a>
+            
+                <a class="link " id="Timer" href="timer.html">Timer</a>
+            
+                <a class="link " id="UrlParser" href="urlparser.html">UrlParser</a>
+            
+                <a class="link " id="Validator" href="validator.html">Validator</a>
+            
+                <a class="link " id="index.js" href="index.html">index.js</a>
+            
+		</div>
+	</div>
+	<div class="layout-right">
+        <div class="module">
+    <h1 class="title">
+    <i class="circle module" title="Module">M</i>
+    Number<span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/number.js.html">number.js</a>
+        </span>
+    </h1>
+    
+    <div class="description block">
+        <hr />
+<p>名称：链尚网通用库库文件：<br />
+日期：2016-10-27<br />
+描述：Number操作的扩展</p>
+<hr />
+    </div>
+    
+    <div class="methods">
+        
+        
+        
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    ensureDecimal
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/number.js.html#line22">number.js,line:22</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称：始终返回一个数字类型 如果传入值不值一个数值，则可以指定默认值 如果没有指定默认值则系统默认会返回0</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>num</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>可能是数值的参数</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>dv</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>如果num为null或者undefined 或者空字符串 则使用此默认值</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.Number.ensureDecimal('0');  &gt; 0
+     Dante.Number.ensureDecimal('');  &gt; 0
+     Dante.Number.ensureDecimal(null);  &gt; 0
+     Dante.Number.ensureDecimal(undefined);  &gt; 0
+     Dante.Number.ensureDecimal('1');  &gt; 1</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    mul
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/number.js.html#line45">number.js,line:45</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称：计算多个数字进行乘法运算</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>...numbers</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>需要相乘的参数</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.Number.ensureDecimal(1,2,3);  &gt; 6</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+    </div>
+</div> 
+	</div>
+    <script type="text/javascript" src="scripts/prettify.js"></script>
+    <script type="text/javascript" src="scripts/lang-css.js"></script>
+    <script type="text/javascript" src="scripts/doc.js"></script>
+    <script> prettyPrint(); </script>
+</body>
+</html>
+

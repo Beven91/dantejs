@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>dantejs文档</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no"  />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-capabale", content="yes"/>
+    <link href="css/layout.css" type="text/css" rel="stylesheet" />
+	<link href="font/iconfont.css" type="text/css" rel="stylesheet" />
+    <link href="css/prettify-jsdoc.css" type="text/css" rel="stylesheet" />
+    <link href="css/prettify-tomorrow.css" type="text/css" rel="stylesheet" />
+</head>
+<body class="layout">
+<div class="layout-header">
+        
+        
+		<h3 class="title">dantejs通用库API库<span class="version"> (1.1.20) &nbsp;&nbsp;</span></h3>
+		<ul class="nav">
+            
+		</ul>
+	</div>
+	<div class="layout-left">
+		<div class="manifest">
+			<a class="link classify icon">&#xf0025;API列表</a>
+            
+                <a class="link " id="Array" href="array.html">Array</a>
+            
+                <a class="link " id="Base" href="base.html">Base</a>
+            
+                <a class="link " id="Date" href="date.html">Date</a>
+            
+                <a class="link " id="Function" href="function.html">Function</a>
+            
+                <a class="link " id="List" href="list.html">List</a>
+            
+                <a class="link " id="Number" href="number.html">Number</a>
+            
+                <a class="link " id="String" href="string.html">String</a>
+            
+                <a class="link " id="Type" href="type.html">Type</a>
+            
+                <a class="link " id="Browser" href="browser.html">Browser</a>
+            
+                <a class="link " id="CookieParser" href="cookie.html">CookieParser</a>
+            
+                <a class="link current" id="EventEmitter" href="emitter.html">EventEmitter</a>
+            
+                <a class="link " id="QueuePool" href="pool.html">QueuePool</a>
+            
+                <a class="link " id="PromiseA" href="promise.html">PromiseA</a>
+            
+                <a class="link " id="Timer" href="timer.html">Timer</a>
+            
+                <a class="link " id="UrlParser" href="urlparser.html">UrlParser</a>
+            
+                <a class="link " id="Validator" href="validator.html">Validator</a>
+            
+                <a class="link " id="index.js" href="index.html">index.js</a>
+            
+		</div>
+	</div>
+	<div class="layout-right">
+        <div class="module">
+    <h1 class="title">
+    <i class="circle module" title="Module">M</i>
+    EventEmitter<span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/emitter.js.html">emitter.js</a>
+        </span>
+    </h1>
+    
+    <div class="description block">
+        <hr />
+<p>名称：链尚网主框架库文件：自定义事件容器<br />
+日期：2015-07-16<br />
+版本：0.0.1<br />
+描述：事件容器，通过创建的事件容器实例进行自定义事件注册，以及在对应的时机触发指定事件</p>
+<pre><code>  例如： 
+         var Dante = require('dantejs');
+         var emitter = new Dante.EventEmitter();
+         //添加事件处理队列函数
+         emitter.on('change',function(newValue,oldValue){  console.log('something is changed');});
+         //触发事件，并且实行事件的队列函数
+         emitter.emit('change',newValue,oldValue);
+</code></pre>
+<hr />
+    </div>
+    
+    <div class="methods">
+        
+        
+        
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    once
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/emitter.js.html#line42">emitter.js,line:42</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称：添加衣蛾指定事件的处理函数 该函数仅执行一次</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>name</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>事件名称</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>handler</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>事件函数</p></div>
+</div>
+
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    on
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/emitter.js.html#line67">emitter.js,line:67</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称：添加一个指定事件的处理函数</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>name</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>事件名称</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>handler</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>事件处理函数</p></div>
+</div>
+
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    off
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/emitter.js.html#line82">emitter.js,line:82</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称：移除一个指定事件的处理函数</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>name</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>事件名称</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>handler</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>事件处理函数 如果handler参数为null 则取消当前事件的所有已绑定的函数</p></div>
+</div>
+
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    destroy
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/emitter.js.html#line98">emitter.js,line:98</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称：销毁事件容器</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    getListeners
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/emitter.js.html#line112">emitter.js,line:112</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称：获取指定事件的已注册的事件列表</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    emit
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/emitter.js.html#line126">emitter.js,line:126</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称：执行指定事件</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+    </div>
+</div> 
+	</div>
+    <script type="text/javascript" src="scripts/prettify.js"></script>
+    <script type="text/javascript" src="scripts/lang-css.js"></script>
+    <script type="text/javascript" src="scripts/doc.js"></script>
+    <script> prettyPrint(); </script>
+</body>
+</html>
+

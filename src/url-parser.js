@@ -7,10 +7,10 @@
  *       例如：http://www.lianshang.cn/orders?id=1&productid=2333
  *       解析结构类似：{protocol:'http:',host:'www.lianshang.cn',pathname:'/orders',paras:{id:1,productid:23333} }
  *******************************************************/
-var Base = require('../base/base.js');
-var Type = require('../base/type.js');
-var Strings = require('../base/string.js');
-var Arrays = require('../base/array.js');
+var Base = require('./base.js');
+var Type = require('./type.js');
+var Strings = require('./string.js');
+var Arrays = require('./array.js');
 
 /**
  * @module UrlParser 

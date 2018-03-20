@@ -1,0 +1,964 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>dantejs文档</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no"  />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-capabale", content="yes"/>
+    <link href="css/layout.css" type="text/css" rel="stylesheet" />
+	<link href="font/iconfont.css" type="text/css" rel="stylesheet" />
+    <link href="css/prettify-jsdoc.css" type="text/css" rel="stylesheet" />
+    <link href="css/prettify-tomorrow.css" type="text/css" rel="stylesheet" />
+</head>
+<body class="layout">
+<div class="layout-header">
+        
+        
+		<h3 class="title">dantejs通用库API库<span class="version"> (1.1.20) &nbsp;&nbsp;</span></h3>
+		<ul class="nav">
+            
+		</ul>
+	</div>
+	<div class="layout-left">
+		<div class="manifest">
+			<a class="link classify icon">&#xf0025;API列表</a>
+            
+                <a class="link current" id="Array" href="array.html">Array</a>
+            
+                <a class="link " id="Base" href="base.html">Base</a>
+            
+                <a class="link " id="Date" href="date.html">Date</a>
+            
+                <a class="link " id="Function" href="function.html">Function</a>
+            
+                <a class="link " id="List" href="list.html">List</a>
+            
+                <a class="link " id="Number" href="number.html">Number</a>
+            
+                <a class="link " id="String" href="string.html">String</a>
+            
+                <a class="link " id="Type" href="type.html">Type</a>
+            
+                <a class="link " id="Browser" href="browser.html">Browser</a>
+            
+                <a class="link " id="CookieParser" href="cookie.html">CookieParser</a>
+            
+                <a class="link " id="EventEmitter" href="emitter.html">EventEmitter</a>
+            
+                <a class="link " id="QueuePool" href="pool.html">QueuePool</a>
+            
+                <a class="link " id="PromiseA" href="promise.html">PromiseA</a>
+            
+                <a class="link " id="Timer" href="timer.html">Timer</a>
+            
+                <a class="link " id="UrlParser" href="urlparser.html">UrlParser</a>
+            
+                <a class="link " id="Validator" href="validator.html">Validator</a>
+            
+                <a class="link " id="index.js" href="index.html">index.js</a>
+            
+		</div>
+	</div>
+	<div class="layout-right">
+        <div class="module">
+    <h1 class="title">
+    <i class="circle module" title="Module">M</i>
+    Array<span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/array.js.html">array.js</a>
+        </span>
+    </h1>
+    
+    <div class="description block">
+        <hr />
+<p>名称：链尚网通用库文件：array 辅助工具<br />
+日期：2016-10-27<br />
+版本：0.0.1<br />
+描述：主要提供针对数组的相关操作方法</p>
+<hr />
+    </div>
+    
+    <div class="methods">
+        
+        
+        
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    ensureArray
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/array.js.html#line23">array.js,line:23</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称：2.始终返回一个数组 如果传入参数是数组则直接返回 否则将不为null的传入参数作为新数据的项进行返回</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>itemOrArray</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>数组或者非数组变量</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.Array.ensureArray(1) &gt; [1]</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    mapDictionary
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/array.js.html#line41">array.js,line:41</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称:将传入的对象数组转换成键值对形式(属性值)(数组项)</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>arrayObject</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>对象数组</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>p</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>作为键的属性名称</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>filter</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>过滤值或者过滤函数 如果传入值为非函数 则默认匹配为指定属性的值</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.Array.this.mapDictionary([{id:'1',name:'ss'},{'id':2,name:'bb'}] ,'id') &gt; {1:{id:1,name:'ss'},2:{id:2,name:'bb'} }</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    mapDictionary2
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/array.js.html#line72">array.js,line:72</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称:将传入的对象数组转换成键(属性值)值(属性值)对形式</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>arrayObject</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>对象数组</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>p</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>作为键的属性名称</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>vp</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>作为值得属性名称</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>filter</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>过滤值或者过滤函数 如果传入值为非函数 则默认匹配为指定属性的值</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.Array.this.mapDictionary2([{id:'1',name:'ss'},{'id':2,name:'bb'}] ,'id','name') &gt; {1:'ss',2:'bb' }</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    arrayJoin
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/array.js.html#line106">array.js,line:106</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称: join对象数组指定属性</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>arrayObject</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>对象数组</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>p</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>要join的属性名称</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>c</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>join字符 默认为','</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.Array.arrayJoin([{id:'1',name:'ss'},{'id':2,name:'bb'}],'id') &gt; 1,2
+     Dante.Array.arrayJoin([{id:'1',name:'ss'},{'id':2,name:'bb'}],'id','-') &gt; 1-2</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    valuesArray
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/array.js.html#line121">array.js,line:121</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称:获取对象数组指定属性值 返回一个属性值数组 例如:[{name:'1',a:'ss'},{'name':'x',}] --&gt; [1,'x']</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>arrayObject</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>对象数组 如果该参数为对象则会默认转换为对象数组</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>p</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>属性名称 可以是属性名称数组</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>unique</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>属性值是否唯一</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>nullable</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>是否保留为空或者空字符串的属性值</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.Array.valuesArray([{id:'1',name:'ss'},{'id':2,name:'bb'}],'id') &gt; [1,2]
+     Dante.Array.valuesArray([{id:'1',name:'ss'},{'id':2,name:'bb'},{'id':1,name:'cc'}],'id',true) &gt; [1,2]
+     Dante.Array.valuesArray([{id:'1',name:'ss'},{'id':2,name:'bb'},{'id':1,name:null}],'name',true) &gt; ['ss','bb']
+     Dante.Array.valuesArray([{id:'1',name:'ss'},{'id':2,name:'bb'},{'id':1,name:null}],'name',true,true) &gt; ['ss','bb',null]</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    valuesObject
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/array.js.html#line151">array.js,line:151</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称:获取指定对象指定属性值 返回一个数组</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>object</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>对象</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>p</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>属性名 也可以是一个属性数组</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.Array.valuesObject({name:'beven',age:999,sex:'2'},['name','age']); &gt;['beven',999]</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    each
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/array.js.html#line171">array.js,line:171</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称:性能循环遍历方法</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>rows</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>海量级数据 数组</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>handler</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>处理函数</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.Array.each([1,2,4],function(item,index){  
+           
+     })</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    blockEach
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/array.js.html#line195">array.js,line:195</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称:海量级数据循环遍历方法</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>rows</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>海量级数据 数组</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>handler</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>处理函数</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.Array.blockEach([1,2,4],function(item,index){  
+           
+     })</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    indexOf
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/array.js.html#line244">array.js,line:244</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称：兼容方式indexOf</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>rows</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>数组对象</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>row</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>要查找的数组项</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>minus</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>是否使用== 而不是使用=== 默认使用===</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.Array.indexOf([1,2,4],2); &gt; 1
+     Dante.Array.indexOf([1,2,4],'2'); &gt; -1
+     Dante.Array.indexOf([1,2,4],'2',true); &gt; 1</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    contains
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/array.js.html#line270">array.js,line:270</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称：判断指定数组中是否存在指定元素</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>rows</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>数组对象</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>待判断的数组项</div>
+    <div class="type cell"></div>
+    <div class="desc cell"></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>like</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>是否使用== 而不是使用=== 默认使用===</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.Array.indexOf([1,2,4],2); &gt; true
+     Dante.Array.indexOf([1,2,4],'2'); &gt; false
+     Dante.Array.indexOf([1,2,4],'2',true); &gt; true</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    filter
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/array.js.html#line286">array.js,line:286</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称：兼容方式Array.filter</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>rows</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>数组对象</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>handler</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>filter过滤函数 通过返回true/false来决定当前数组是否需要返回</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.Array.indexOf([1,2,4],function(item,index){ return item!=2 }); &gt; [1,4]</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    filterEmpty
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/array.js.html#line309">array.js,line:309</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称：过滤掉数组为Null或者为空字符串，或者多个空字符的项</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>rows</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>数组</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.Array.filterEmpty([1,2,4,'',null,undefined]); &gt; [1,2,4,'']</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    querySplice
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/array.js.html#line320">array.js,line:320</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称：指定数组中符合条件的项,返回被移除项</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>rows</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>数组</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>handler</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>删除条件函数</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     var deletedRows =Dante.Array.querySplice([1,2,2,4,4],function(item,index){return item==2;}); &gt; [2,2]</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    isEmptyArray
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/array.js.html#line345">array.js,line:345</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称:判断传入对象是否为一个不是空的数组(或者包含0个数组元素)</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>array</div>
+    <div class="type cell"></div>
+    <div class="desc cell"></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.Array.isEmptyArray([]); &gt; true
+     Dante.Array.isEmptyArray(null); &gt; true</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    sumOf
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/array.js.html#line364">array.js,line:364</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>对象数组中指定字段的和</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>array</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>对象数组</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>p</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>属性值key</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.Array.sumOf([{num:1},{num:2}],'num'); &gt; 3</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    productOf
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/array.js.html#line381">array.js,line:381</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>对象数组中指定字段的乘积</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>array</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>对象数组</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>p</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>属性值key</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.Array.productOf([{num:1},{num:2}],'num'); &gt; 2</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    classify
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/array.js.html#line398">array.js,line:398</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称:树结构数据自动分类</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>rows</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>对象数组</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>parentKey</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>父级属性</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>childKey</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>子级属性</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>cp</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>自定义对象子级数据属性名 默认为children 例如:{name:1,children:[....]}</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>del</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>默认为true 是否清除死循环属性链 例如:默认在每个数据里边会有一个parent{name:1,children:[],parent:{xxx}}</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>formatter</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>格式化器函数 例如：function(item){ item.id =s;item.key=1; }</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     var rows = [{id:1,parent:0,name:'beven'},{id:2,parent:1,name:'beven2'},{id:3,parent:2,name:'beven3'}];
+     Dante.Array.classify(rows,'parent','id'); &gt; {id:1,parent:0,name:'beven',children:[.....]}</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+        
+    </div>
+</div> 
+	</div>
+    <script type="text/javascript" src="scripts/prettify.js"></script>
+    <script type="text/javascript" src="scripts/lang-css.js"></script>
+    <script type="text/javascript" src="scripts/doc.js"></script>
+    <script> prettyPrint(); </script>
+</body>
+</html>
+

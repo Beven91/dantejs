@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>dantejs文档</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no"  />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-capabale", content="yes"/>
+    <link href="css/layout.css" type="text/css" rel="stylesheet" />
+	<link href="font/iconfont.css" type="text/css" rel="stylesheet" />
+    <link href="css/prettify-jsdoc.css" type="text/css" rel="stylesheet" />
+    <link href="css/prettify-tomorrow.css" type="text/css" rel="stylesheet" />
+</head>
+<body class="layout">
+<div class="layout-header">
+        
+        
+		<h3 class="title">dantejs通用库API库<span class="version"> (1.1.20) &nbsp;&nbsp;</span></h3>
+		<ul class="nav">
+            
+		</ul>
+	</div>
+	<div class="layout-left">
+		<div class="manifest">
+			<a class="link classify icon">&#xf0025;API列表</a>
+            
+                <a class="link " id="Array" href="array.html">Array</a>
+            
+                <a class="link " id="Base" href="base.html">Base</a>
+            
+                <a class="link " id="Date" href="date.html">Date</a>
+            
+                <a class="link current" id="Function" href="function.html">Function</a>
+            
+                <a class="link " id="List" href="list.html">List</a>
+            
+                <a class="link " id="Number" href="number.html">Number</a>
+            
+                <a class="link " id="String" href="string.html">String</a>
+            
+                <a class="link " id="Type" href="type.html">Type</a>
+            
+                <a class="link " id="Browser" href="browser.html">Browser</a>
+            
+                <a class="link " id="CookieParser" href="cookie.html">CookieParser</a>
+            
+                <a class="link " id="EventEmitter" href="emitter.html">EventEmitter</a>
+            
+                <a class="link " id="QueuePool" href="pool.html">QueuePool</a>
+            
+                <a class="link " id="PromiseA" href="promise.html">PromiseA</a>
+            
+                <a class="link " id="Timer" href="timer.html">Timer</a>
+            
+                <a class="link " id="UrlParser" href="urlparser.html">UrlParser</a>
+            
+                <a class="link " id="Validator" href="validator.html">Validator</a>
+            
+                <a class="link " id="index.js" href="index.html">index.js</a>
+            
+		</div>
+	</div>
+	<div class="layout-right">
+        <div class="module">
+    <h1 class="title">
+    <i class="circle module" title="Module">M</i>
+    Function<span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/function.js.html">function.js</a>
+        </span>
+    </h1>
+    
+    <div class="description block">
+        <hr />
+<p>名称：链尚网通用库库文件：<br />
+日期：2016-10-27<br />
+描述：函数的扩展</p>
+<hr />
+    </div>
+    
+    <div class="methods">
+        
+        
+        
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    call
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/function.js.html#line22">function.js,line:22</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称：将传入的函数转交给指定的对象执行 如果传入的函数不为函数类型 不触发异常</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>invoker</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>函数调用者</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>fn</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>函数</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>...args</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>函数对应的参数</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     var obj = {name:'hello'};
+     var fn = function(arg1,arg2){ alert(arg1+arg2+this.name); }
+     Dante.Fn.call(obj,fn,'h','b');  &gt; alert: 'bhhello';</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    apply
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/function.js.html#line44">function.js,line:44</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称：将传入的函数转交给指定的对象执行 如果传入的函数不为函数类型 不触发异常</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>invoker</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>函数调用者</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>fn</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>函数</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>[args...]</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>函数对应的参数</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     var obj = {name:'hello'};
+     var fn = function(arg1,arg2){ alert(arg1+arg2+this.name); }
+     Dante.Fn.apply(obj,fn,['h','b']);  &gt; alert: 'bhhello';</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    bind
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/function.js.html#line63">function.js,line:63</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称：返回一个劫持函数，被劫持函数handler调用者转向至getCall调用者，函数柯里化....</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>invoker</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>调用者 默认为window</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>handler</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>待调用的函数 注意：在调用时函数中的this指向当前实例</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>closureArgs</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>额外传递给handler的参数,注意 该参数使用位于handler最后一个 例如：handler(args1,arg2,arg3,...,closureArgs)</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     var obj = {name:'hello'};
+     var fn = function(arg1,arg2,last_is_context){ alert(arg1+arg2+this.name); }
+     var bindFn = Dante.Fn.bind(invoker,fn,{id:2})
+     bindFn(1,2); &gt; alert: '12hello';</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    once
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/function.js.html#line92">function.js,line:92</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称：返回一个劫持函数，该函数仅能调用一次，多次调用无效，被劫持函数handler调用者转向至getCall调用者，函数柯里化....</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>invoker</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>调用者 默认为window</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>handler</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>待调用的函数 注意：在调用时函数中的this指向当前实例</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>closureArgs</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>额外传递给handler的参数,注意 该参数使用位于handler最后一个 例如：handler(args1,arg2,arg3,...,closureArgs)</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     var obj = {name:'hello'};
+     var fn = function(arg1,arg2,last_is_context){ alert(arg1+arg2+this.name); }
+     var bindFn = Dante.Fn.bind(invoker,fn,{id:2})
+     bindFn(1,2); &gt; alert: '12hello';
+     bindFn(1,2); &gt; 不执行任何操作</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+    </div>
+</div> 
+	</div>
+    <script type="text/javascript" src="scripts/prettify.js"></script>
+    <script type="text/javascript" src="scripts/lang-css.js"></script>
+    <script type="text/javascript" src="scripts/doc.js"></script>
+    <script> prettyPrint(); </script>
+</body>
+</html>
+

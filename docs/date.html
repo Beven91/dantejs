@@ -1,0 +1,949 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>dantejs文档</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no"  />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-capabale", content="yes"/>
+    <link href="css/layout.css" type="text/css" rel="stylesheet" />
+	<link href="font/iconfont.css" type="text/css" rel="stylesheet" />
+    <link href="css/prettify-jsdoc.css" type="text/css" rel="stylesheet" />
+    <link href="css/prettify-tomorrow.css" type="text/css" rel="stylesheet" />
+</head>
+<body class="layout">
+<div class="layout-header">
+        
+        
+		<h3 class="title">dantejs通用库API库<span class="version"> (1.1.20) &nbsp;&nbsp;</span></h3>
+		<ul class="nav">
+            
+		</ul>
+	</div>
+	<div class="layout-left">
+		<div class="manifest">
+			<a class="link classify icon">&#xf0025;API列表</a>
+            
+                <a class="link " id="Array" href="array.html">Array</a>
+            
+                <a class="link " id="Base" href="base.html">Base</a>
+            
+                <a class="link current" id="Date" href="date.html">Date</a>
+            
+                <a class="link " id="Function" href="function.html">Function</a>
+            
+                <a class="link " id="List" href="list.html">List</a>
+            
+                <a class="link " id="Number" href="number.html">Number</a>
+            
+                <a class="link " id="String" href="string.html">String</a>
+            
+                <a class="link " id="Type" href="type.html">Type</a>
+            
+                <a class="link " id="Browser" href="browser.html">Browser</a>
+            
+                <a class="link " id="CookieParser" href="cookie.html">CookieParser</a>
+            
+                <a class="link " id="EventEmitter" href="emitter.html">EventEmitter</a>
+            
+                <a class="link " id="QueuePool" href="pool.html">QueuePool</a>
+            
+                <a class="link " id="PromiseA" href="promise.html">PromiseA</a>
+            
+                <a class="link " id="Timer" href="timer.html">Timer</a>
+            
+                <a class="link " id="UrlParser" href="urlparser.html">UrlParser</a>
+            
+                <a class="link " id="Validator" href="validator.html">Validator</a>
+            
+                <a class="link " id="index.js" href="index.html">index.js</a>
+            
+		</div>
+	</div>
+	<div class="layout-right">
+        <div class="module">
+    <h1 class="title">
+    <i class="circle module" title="Module">M</i>
+    Date<span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/date.js.html">date.js</a>
+        </span>
+    </h1>
+    
+    <div class="description block">
+        <hr />
+<p>链尚网通用库文件：时间操作工具<br />
+日期：2016-10-27<br />
+描述：提供相关时间操作函数</p>
+<hr />
+    </div>
+    
+    <div class="methods">
+        
+        
+        
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    format
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/date.js.html#line23">date.js,line:23</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>将指定时间转换成指定格式的字符串格式</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>date</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>可以是Date对象，或者时间格式的字符串</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>fmt</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>格式单位(fmt) 例如： yyyy-MM-dd hh:mm:S.S</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.Date.format(new Date(),'yyyy-MM-dd hh:mm:S.S')</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    isDate
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/date.js.html#line50">date.js,line:50</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>判断传入值是否为Date数据类型</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>date</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>待判断的值</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>    var Dante = require('dantejs');
+    Dante.Date.isDate(''); //&gt; false
+    Dante.Date.isDate(new Date()); //&gt; true</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    convert
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/date.js.html#line63">date.js,line:63</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>时间转换函数</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>maybe</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>时间类型，或者时间类型字符串，或者毫秒数字</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>    var Dante = require('dantejs');
+    Dante.Date.convert('2016-10-22'); &gt; Date()</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    diff
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/date.js.html#line83">date.js,line:83</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>计算两个时间之间的差值</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>dtStart</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>开始日期 可以是一个时间类型或者一个时间格式的字符串</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>dtEnd.</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>开始日期 可以是一个时间类型或者一个时间格式的字符串</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>unit</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>单位： S(毫秒) s(秒) m(分) h(小时) d(天) M(月) y(年)</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>    var Dante = require('dantejs');
+    Dante.Date.diff('2016-10-22','2016-10-01','d'); &gt;21</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    dateAdd
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/date.js.html#line126">date.js,line:126</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>增加添加指定单位的时间值</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>dt</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>日期 可以是一个时间类型或者一个时间格式的字符串</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>num</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>时间隔值</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>unit</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>时间间隔单位： S(毫秒) s(秒) m(分) h(小时) d(天) M(月) y(年)</p></div>
+</div>
+
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    addMilliseconds
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/date.js.html#line154">date.js,line:154</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>给指定时间累加毫秒</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>dt</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>待累加毫秒的时间类型数据(可以是时间类型数据或者时间格式的字符串)</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>milliSeconds</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>累加毫秒</p></div>
+</div>
+
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    addSeconds
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/date.js.html#line163">date.js,line:163</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>给指定时间累加秒</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>dt):待累加秒的时间</div>
+    <div class="type cell"></div>
+    <div class="desc cell"></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>seconds):累加秒</div>
+    <div class="type cell"></div>
+    <div class="desc cell"></div>
+</div>
+
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    addMinutes
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/date.js.html#line172">date.js,line:172</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>给指定时间累加分钟</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>dt):待累加分钟的时间(可以是时间类型数据或者时间格式的字符串)</div>
+    <div class="type cell"></div>
+    <div class="desc cell"></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>minutes):累加分钟</div>
+    <div class="type cell"></div>
+    <div class="desc cell"></div>
+</div>
+
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    addHours
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/date.js.html#line181">date.js,line:181</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>给指定时间累加小时</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>dt):待累加小时的时间(可以是时间类型数据或者时间格式的字符串)</div>
+    <div class="type cell"></div>
+    <div class="desc cell"></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>hours):累加小时</div>
+    <div class="type cell"></div>
+    <div class="desc cell"></div>
+</div>
+
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    addDays
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/date.js.html#line190">date.js,line:190</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>给指定时间累加天数</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>dt):待累加天数的时间(可以是时间类型数据或者时间格式的字符串)</div>
+    <div class="type cell"></div>
+    <div class="desc cell"></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>days):累加天数</div>
+    <div class="type cell"></div>
+    <div class="desc cell"></div>
+</div>
+
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    addMonths
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/date.js.html#line199">date.js,line:199</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>给指定时间累加月</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>dt):待累加月的时间(可以是时间类型数据或者时间格式的字符串)</div>
+    <div class="type cell"></div>
+    <div class="desc cell"></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>months):累加月</div>
+    <div class="type cell"></div>
+    <div class="desc cell"></div>
+</div>
+
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    addYears
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/date.js.html#line208">date.js,line:208</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>给指定时间累加年</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>dt):待累加年的时间(可以是时间类型数据或者时间格式的字符串)</div>
+    <div class="type cell"></div>
+    <div class="desc cell"></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>years):累加年</div>
+    <div class="type cell"></div>
+    <div class="desc cell"></div>
+</div>
+
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    maxDayOfMonth
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/date.js.html#line217">date.js,line:217</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>获取当前日期所在月的最大天数</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>dt):时间类型或者可以是一个时间格式的字符串</div>
+    <div class="type cell"></div>
+    <div class="desc cell"></div>
+</div>
+
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    dayOfWeek
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/date.js.html#line227">date.js,line:227</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>获取当前传入时间天所在汉字星期值</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>dt</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>传入时间类型或者时间类型格式的字符串</p></div>
+</div>
+
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    clone
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/date.js.html#line236">date.js,line:236</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>克隆传入时间</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>dt</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>时间类型变量或者时间格式的字符串</p></div>
+</div>
+
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    isLeapYear
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/date.js.html#line245">date.js,line:245</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>判断传入日期是否为闰年</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>date</div>
+    <div class="type cell"></div>
+    <div class="desc cell"></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.isLeapYear('2004-10-22 10:22');</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    datePart
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/date.js.html#line258">date.js,line:258</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>获取当前传入时间的单位部分值</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>dt</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>时间类型或者时间类型格式字符串</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>part</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>时间间隔单位： S(毫秒) s(秒) m(分) h(小时) d(天) m(月) y(年) w(星期值)</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.DatePart('2004-10-22 10:22','y'); &gt; 2004</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    daysInYear
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/date.js.html#line291">date.js,line:291</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>获取当前日期所在年的第多少天</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>dt</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>时间类型或者为时间类型格式的字符串</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.daysInYear('2015-04-23 12:00:00'); &gt; 113</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    weeksInYears
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/date.js.html#line304">date.js,line:304</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>获取当前日期所在年的第几周</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>dt</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>时间类型或者为时间类型格式的字符串</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.weeksInYears('2015-01-23 12:00:00'); &gt; 4</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    toUnixTimeStamp
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/date.js.html#line325">date.js,line:325</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称:将当前日志转换成unix的时间戳 ..</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>date</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>日期</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.toUnixTimeStamp('2015-01-23 12:00:00'); &gt; 1421985600</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    unixTimeStampToDate
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/date.js.html#line337">date.js,line:337</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称:将unix时间戳转换成date类型</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>timestamp</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>时间戳字符串</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.unixTimeStampToDate(1421985600); &gt; '2015-01-23 12:00:00'</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    countHour
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/date.js.html#line349">date.js,line:349</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称:将毫秒转换成 总计多少小时 多少分钟 多少秒</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>milliSeconds</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>毫秒值</p></div>
+</div>
+
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    countDays
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/date.js.html#line360">date.js,line:360</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>名称:将毫秒转换成 总计多少天 多少小时 多少分钟 多少秒</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>milliSeconds</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>毫秒值</p></div>
+</div>
+
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+    </div>
+</div> 
+	</div>
+    <script type="text/javascript" src="scripts/prettify.js"></script>
+    <script type="text/javascript" src="scripts/lang-css.js"></script>
+    <script type="text/javascript" src="scripts/doc.js"></script>
+    <script> prettyPrint(); </script>
+</body>
+</html>
+

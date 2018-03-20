@@ -1,0 +1,1361 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>dantejs文档</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no"  />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-capabale", content="yes"/>
+    <link href="css/layout.css" type="text/css" rel="stylesheet" />
+	<link href="font/iconfont.css" type="text/css" rel="stylesheet" />
+    <link href="css/prettify-jsdoc.css" type="text/css" rel="stylesheet" />
+    <link href="css/prettify-tomorrow.css" type="text/css" rel="stylesheet" />
+</head>
+<body class="layout">
+<div class="layout-header">
+        
+        
+		<h3 class="title">dantejs通用库API库<span class="version"> (1.1.20) &nbsp;&nbsp;</span></h3>
+		<ul class="nav">
+            
+		</ul>
+	</div>
+	<div class="layout-left">
+		<div class="manifest">
+			<a class="link classify icon">&#xf0025;API列表</a>
+            
+                <a class="link " id="Array" href="array.html">Array</a>
+            
+                <a class="link " id="Base" href="base.html">Base</a>
+            
+                <a class="link " id="Date" href="date.html">Date</a>
+            
+                <a class="link " id="Function" href="function.html">Function</a>
+            
+                <a class="link " id="List" href="list.html">List</a>
+            
+                <a class="link " id="Number" href="number.html">Number</a>
+            
+                <a class="link current" id="String" href="string.html">String</a>
+            
+                <a class="link " id="Type" href="type.html">Type</a>
+            
+                <a class="link " id="Browser" href="browser.html">Browser</a>
+            
+                <a class="link " id="CookieParser" href="cookie.html">CookieParser</a>
+            
+                <a class="link " id="EventEmitter" href="emitter.html">EventEmitter</a>
+            
+                <a class="link " id="QueuePool" href="pool.html">QueuePool</a>
+            
+                <a class="link " id="PromiseA" href="promise.html">PromiseA</a>
+            
+                <a class="link " id="Timer" href="timer.html">Timer</a>
+            
+                <a class="link " id="UrlParser" href="urlparser.html">UrlParser</a>
+            
+                <a class="link " id="Validator" href="validator.html">Validator</a>
+            
+                <a class="link " id="index.js" href="index.html">index.js</a>
+            
+		</div>
+	</div>
+	<div class="layout-right">
+        <div class="module">
+    <h1 class="title">
+    <i class="circle module" title="Module">M</i>
+    String<span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/string.js.html">string.js</a>
+        </span>
+    </h1>
+    
+    <div class="description block">
+        <hr />
+<p>链尚网通用库文件：string 字符串操作工具<br />
+日期：2016-10-27<br />
+版本：0.0.1<br />
+描述：主要提供字符串的相关操作函数，提高开发效率</p>
+<hr />
+    </div>
+    
+    <div class="methods">
+        
+        
+        
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    ensure
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/string.js.html#line22">string.js,line:22</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>确保传入的值，始终为一个字符串，如果传入值为null或者undefined则返回def 如果def没有则返回''</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>maybe</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>传入对象</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>def</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>默认值 在maybe为null或者undefined时使用此默认值</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+
+     Dante.String.ensure(10); // ---&gt; '10'
+     Dante.String.ensure(null); // ---&gt; ''
+     Dante.String.ensure(null,'abc'); // ---&gt; 'abc'</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    format
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/string.js.html#line40">string.js,line:40</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>简单字符串格式化工具</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>str</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>格式化模板字符串</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>...args</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>每个占位{0}-{N}对应的值</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+
+     Dante.String.format('name:{0},age:{1}','beven',999); //--&gt; 'name:beven,age:999'
+     Dante.String.format('name:{0},age:{1}，{0}','beven',999); //--&gt; 'name:beven,age:999，beven'</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    format2
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/string.js.html#line59">string.js,line:59</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>简单字符串格式化工具</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>str</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>格式化模板字符串</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>args</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>每个占位{0}-{N}对应的数组值[1,2,3,4]</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     
+     Dante.String.format('name:{0},age:{1}',['beven',999]); //--&gt; 'name:beven,age:999'</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    startsWith
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/string.js.html#line76">string.js,line:76</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>检测字符串str 是否以chars开头</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>str</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>原始字符串</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>chars</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>包含字符串</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>ignore</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>是否忽略大小写</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+
+     Dante.String.startsWith('hello beven', &quot;hello&quot;);
+     //忽略大小写
+     Dante.String.startsWith('Hello beven', &quot;hell&quot;, true);</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    endsWith
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/string.js.html#line100">string.js,line:100</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>检测字符串str 是否以chars开头</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>str</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>原始字符串</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>chars</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>包含字符串</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>ignore</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>是否忽略大小写</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+
+     Dante.String.endsWith('hello beven', &quot;beven&quot;);
+     //忽略大小写
+     Dante.String.endsWith('Hello Beven', &quot;beven&quot;, true);</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    trim
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/string.js.html#line124">string.js,line:124</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>去掉字符串左右两边的空格</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>s</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>字符串</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.String.trim(' beven ');</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    trimAll
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/string.js.html#line136">string.js,line:136</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>却掉指定字符串的所有空格</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>s</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>字符串</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.String.trimAll(' be ven ');</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    trimLeft
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/string.js.html#line148">string.js,line:148</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>去掉字符串(s)左侧开头的指定字符串(trim)（默认为空格)</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>s</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>字符串</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>trim</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>开头要去除的字符串 默认为空格</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>rep</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>如果字符串s开头存在trim，则替换成req req默认：''</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>ignoreCase</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>是否忽略大小写，在指定trim时</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.String.trimLeft('  beven ') //---&gt; 'beven '
+     Dante.String.trimLeft('  beven ','','abc') //---&gt; 'abcbeven '
+     Dante.String.trimLeft('abcbevenabc ','abc') //---&gt; 'bevenabc '
+     //忽略大小写
+     Dante.String.trimLeft('Abcbevenabc', 'abc',true)</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    trimRight
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/string.js.html#line176">string.js,line:176</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>去掉字符串(s)左侧开头的指定字符串(trim)（默认为空格)</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>s</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>字符串</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>trim</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>开头要去除的字符串 默认为空格</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>rep</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>如果字符串s开头存在trim，则替换成req req默认：''</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>ignoreCase</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>是否忽略大小写，在指定trim时</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.String.trimRight('beven ') //---&gt; 'beven'
+     Dante.String.trimRight('beven    ','','abc') //---&gt; 'bevenabc '
+     Dante.String.trimRight('bevenabc ','abc') //---&gt; 'beven'
+     忽略大小写
+     Dante.String.trimRight('bevenAbc', 'abc')</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    isEmpty
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/string.js.html#line203">string.js,line:203</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>判断指定字符串是否为null或者undefined</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>s</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>字符串</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.String.isEmpty(str);</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    isEmptyAny
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/string.js.html#line215">string.js,line:215</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>判断传入字符串参数列表是否存在一项为null或者undefined</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>...strList</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>字符串列表</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.String.isEmptyAny(str1,str2,str2);</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    isEmptyEvery
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/string.js.html#line237">string.js,line:237</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>判断传入字符串参数列表全部项是否都为null或者undefined</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>...strList</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>字符串列表</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.String.isEmptyEvery(str1,str2) //---&gt; true</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    isBlank
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/string.js.html#line259">string.js,line:259</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>判断指定值是否为null,undefined或者空字符串或者包含空格</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>s</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>字符串</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.String.isBlank(str);</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    isBlankAny
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/string.js.html#line275">string.js,line:275</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>判断传入字符串参数列表是否存在一项为null,undefined或者空字符串或者包含空格</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>...strList</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>字符串列表</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.String.isBlankAny(str,str1,str2)</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    isBlankEvery
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/string.js.html#line297">string.js,line:297</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>判断传入字符串参数列表是所有项都为null,undefined或者空字符串或者包含空格</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>...strList</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>字符串列表</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.String.isBlankAny(str1,str2,str3)</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    emptyOf
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/string.js.html#line319">string.js,line:319</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>如果传入值为null或者undefined时，使用指定默认值</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>v</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>传入值</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>dv</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>替代字符串</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.String.emptyOf(str,'12') //---&gt; '12'</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    blankOf
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/string.js.html#line332">string.js,line:332</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>如果传入值为null或者undefined或者空字符串以及多个空格时，使用指定默认值</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>v</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>传入值</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>dv</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>替代字符串</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.String.blankOf(str,'12');</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    equals
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/string.js.html#line345">string.js,line:345</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>比较连个字符串是否相等</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>a</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>字符串1</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>b</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>字符串2</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>ignore</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>是否忽略大小写</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.String.equals(str,str2);</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    isString
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/string.js.html#line363">string.js,line:363</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>14.判断传入值是否为String类型</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>v</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>字符串</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.String.isString(str);</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    repeat
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/string.js.html#line375">string.js,line:375</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>重复指定字符</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>chars</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>要重复的字符串</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>num</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>重复次数</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.String.repeat('a',2); // &gt; 'aa'</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    pad
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/string.js.html#line397">string.js,line:397</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>在不满足指定长度的情况下，自动从两侧补全字符串</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>chars</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>字符串</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>length</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>长度</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>padding</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>补全的字符 例如： 'a' 默认:' '</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.String.pad('12',5); //&gt; '  12 '
+     Dante.String.pad('12',5,'-'); //&gt; '--12-'</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    padLeft
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/string.js.html#line421">string.js,line:421</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>在不满足指定长度的情况下，自动补全左侧字符</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>chars</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>字符串</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>length</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>数字字符串</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>padding</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>补全的字符 例如： 'a' 默认:' '</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.String.padLeft('aa',4); //&gt; '  aa'
+     Dante.String.padLeft('aa',4,'0'); //&gt; '00aa'</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    padRight
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/string.js.html#line442">string.js,line:442</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>在不满足指定长度的情况下，自动补全右侧字符</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>chars</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>字符串</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>length</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>数字字符串</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>padding</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>补全的字符 例如： 'a' 默认:' '</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.String.padRight('aa',4); //&gt; 'aa  '
+     Dante.String.padRight('aa',4,'0'); //&gt; 'aa00'</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    replace
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/string.js.html#line463">string.js,line:463</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>替换指定字符串指定内容</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>str</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>原始字符串</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>origin</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>要替换的字符串 可以为正则</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>rep</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>替换成字符串</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.String.replace('aabevenaahello','aa'); //&gt; 'bevenhello'
+     Dante.String.replace('aabevenaahello','aa','bb'); //&gt; 'bbbevenbbhello'</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    ensureStartsWith
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/string.js.html#line485">string.js,line:485</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>确定字符串以 xx(chars) 开头，如果不是则默认拼接至开头</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>str</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>原始字符串</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>chars</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>开头字符串</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.String.ensureStartsWith('beven','aa'); //&gt; 'aabeven'
+     Dante.String.ensureStartsWith('aabeven','aa'); //&gt; 'aabeven'</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    ensureEndsWith
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/string.js.html#line499">string.js,line:499</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>确定字符串以 xx(chars) 结尾，如果不是则默认拼接至结尾</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>str</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>原始字符串</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>chars</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>结尾字符串</p></div>
+</div>
+
+    
+    </div>
+    
+            <h6><i class="circle example" title="Example">E</i>用例：</h6>
+<div class="code example">
+    <div class="code-inner">
+        <pre class="prettyprint">
+            <pre>     var Dante = require('dantejs');
+     Dante.String.ensureEndsWith('beven','aa'); //&gt; 'bevenaa'
+     Dante.String.ensureEndsWith('bevenaa','aa'); //&gt; 'bevenaa'</pre>
+        </pre>
+    </div>
+</div>
+
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    toCamel
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/string.js.html#line513">string.js,line:513</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>将字符串转换成首字母大写</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+    </div>
+</div> 
+	</div>
+    <script type="text/javascript" src="scripts/prettify.js"></script>
+    <script type="text/javascript" src="scripts/lang-css.js"></script>
+    <script type="text/javascript" src="scripts/doc.js"></script>
+    <script> prettyPrint(); </script>
+</body>
+</html>
+

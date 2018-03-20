@@ -1,0 +1,946 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>dantejs文档</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no"  />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-capabale", content="yes"/>
+    <link href="css/layout.css" type="text/css" rel="stylesheet" />
+	<link href="font/iconfont.css" type="text/css" rel="stylesheet" />
+    <link href="css/prettify-jsdoc.css" type="text/css" rel="stylesheet" />
+    <link href="css/prettify-tomorrow.css" type="text/css" rel="stylesheet" />
+</head>
+<body class="layout">
+<div class="layout-header">
+        
+        
+		<h3 class="title">dantejs通用库API库<span class="version"> (1.1.20) &nbsp;&nbsp;</span></h3>
+		<ul class="nav">
+            
+		</ul>
+	</div>
+	<div class="layout-left">
+		<div class="manifest">
+			<a class="link classify icon">&#xf0025;API列表</a>
+            
+                <a class="link " id="Array" href="array.html">Array</a>
+            
+                <a class="link " id="Base" href="base.html">Base</a>
+            
+                <a class="link " id="Date" href="date.html">Date</a>
+            
+                <a class="link " id="Function" href="function.html">Function</a>
+            
+                <a class="link " id="List" href="list.html">List</a>
+            
+                <a class="link " id="Number" href="number.html">Number</a>
+            
+                <a class="link " id="String" href="string.html">String</a>
+            
+                <a class="link " id="Type" href="type.html">Type</a>
+            
+                <a class="link " id="Browser" href="browser.html">Browser</a>
+            
+                <a class="link " id="CookieParser" href="cookie.html">CookieParser</a>
+            
+                <a class="link " id="EventEmitter" href="emitter.html">EventEmitter</a>
+            
+                <a class="link " id="QueuePool" href="pool.html">QueuePool</a>
+            
+                <a class="link " id="PromiseA" href="promise.html">PromiseA</a>
+            
+                <a class="link " id="Timer" href="timer.html">Timer</a>
+            
+                <a class="link " id="UrlParser" href="urlparser.html">UrlParser</a>
+            
+                <a class="link current" id="Validator" href="validator.html">Validator</a>
+            
+                <a class="link " id="index.js" href="index.html">index.js</a>
+            
+		</div>
+	</div>
+	<div class="layout-right">
+        <div class="module">
+    <h1 class="title">
+    <i class="circle module" title="Module">M</i>
+    Validator<span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/validator.js.html">validator.js</a>
+        </span>
+    </h1>
+    
+    <div class="description block">
+        <hr />
+<p>名称：链尚网主框架库文件：数据规则校验器<br />
+日期：2015-07-15<br />
+版本：0.0.1<br />
+描述：主要提供字符串的相关操作函数，提高开发效率</p>
+<hr />
+    </div>
+    
+    <div class="methods">
+        
+        
+        
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    registerRule
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/validator.js.html#line31">validator.js,line:31</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>注册一个规则</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>name</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>校验器名称</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>handler</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>校验器函数 返回 true/false</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>defaultMessage</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>验证失败消息</p></div>
+</div>
+
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    onInvalid
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/validator.js.html#line56">validator.js,line:56</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>绑定一个invalid事件</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    onValid
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/validator.js.html#line63">validator.js,line:63</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>绑定一个valid事件</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    clear
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/validator.js.html#line70">validator.js,line:70</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>清空绑定的invalid事件</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    model
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/validator.js.html#line77">validator.js,line:77</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>校验指定model</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>model</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>object对象</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>cfg</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>配置对象</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>slient</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>是否 为静默模式 如果为true 则不触发onInvalid与inValid事件 错误消息可以从currentMessage中取出</p></div>
+</div>
+
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    attr
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/validator.js.html#line108">validator.js,line:108</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>使用指定验证配置对象验证指定model指定属性</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>name</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>验证属性名称</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>value</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>属性值</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>cfg</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>验证配置对象</p></div>
+</div>
+
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    required
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/validator.js.html#line162">validator.js,line:162</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>非空校验器</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>value</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>值</p></div>
+</div>
+
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    twoRequired
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/validator.js.html#line173">validator.js,line:173</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>二选一必填</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>v</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>值</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>attr</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>属性名</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>model</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>上下文对象 v2值来源于model[attr]</p></div>
+</div>
+
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    email
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/validator.js.html#line199">validator.js,line:199</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>邮件校验器</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>v</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>值</p></div>
+</div>
+
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    date
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/validator.js.html#line221">validator.js,line:221</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>时间校验器</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>v</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>值</p></div>
+</div>
+
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    dateISO
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/validator.js.html#line232">validator.js,line:232</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>ISO时间格式校验器</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>v</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>值</p></div>
+</div>
+
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    number
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/validator.js.html#line243">validator.js,line:243</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>整数格式校验器</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>v</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>值</p></div>
+</div>
+
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    digits
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/validator.js.html#line254">validator.js,line:254</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>数字格式校验器</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>v</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>值</p></div>
+</div>
+
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    creditcard
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/validator.js.html#line265">validator.js,line:265</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>银行卡号校验器</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>v</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>值</p></div>
+</div>
+
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    minlength
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/validator.js.html#line300">validator.js,line:300</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>最小长度校验器</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>v</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>值</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>min</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>最小长度</p></div>
+</div>
+
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    maxlength
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/validator.js.html#line312">validator.js,line:312</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>最大长度校验器</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>v</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>值</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>max</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>最大长度</p></div>
+</div>
+
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    rangelength
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/validator.js.html#line324">validator.js,line:324</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>长度范围校验</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>v</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>值 param min 最小长度<br />
+param max 最大长度</p></div>
+</div>
+
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    min
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/validator.js.html#line338">validator.js,line:338</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>最小值校验器</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>v</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>值</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>min</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>最小值</p></div>
+</div>
+
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    max
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/validator.js.html#line350">validator.js,line:350</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>最大值校验</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>v</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>值</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>max</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>最大值</p></div>
+</div>
+
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    range
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/validator.js.html#line362">validator.js,line:362</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>值范围校验</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>v</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>值 param min 最小值<br />
+param max 最大值</p></div>
+</div>
+
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    mobile
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/validator.js.html#line375">validator.js,line:375</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>手机号校验</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>v</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>值</p></div>
+</div>
+
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    tel
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/validator.js.html#line386">validator.js,line:386</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>手机号校验</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>v</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>值</p></div>
+</div>
+
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    equalTo
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/validator.js.html#line398">validator.js,line:398</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>校验两个值是否相等</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>v</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>值</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>attr</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>属性名</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>model</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>上下文对象 v2值来源于model[attr]</p></div>
+</div>
+
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    minTo
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/validator.js.html#line413">validator.js,line:413</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>校验当前值 是否 小于指定属性值</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>v</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>值</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>attr</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>属性名</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>model</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>上下文对象 v2值来源于model[attr]</p></div>
+</div>
+
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    maxTo
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/validator.js.html#line428">validator.js,line:428</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>校验当前值 是否 大于指定属性值</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>v</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>值</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>attr</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>属性名</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>model</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>上下文对象 v2值来源于model[attr]</p></div>
+</div>
+
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+                    <div class="method">
+    <h1 class="title fn" click="toggleMethod">
+    <i class="circle fn" title="Function">F</i>
+    idCard
+        <span class="source-link">
+        | source:<a target="_blank" class="source-link-a" href="source/validator.js.html#line443">validator.js,line:443</a>
+        </span>
+    </h1>
+    <div class="method-inner" style="display:none">
+    <div class="description">
+        <p>中华人民共和国身份证校验</p>
+    </div>
+    <div class="parameters">
+    <h6>函数签名参数：</h6>
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>v</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>值</p></div>
+</div>
+
+    
+                <div class="parameter">
+    <div class="name cell"><i title="Param" class="circle param">P</i>model</div>
+    <div class="type cell"></div>
+    <div class="desc cell"><p>上下文对象 v2值来源于model[attr]</p></div>
+</div>
+
+    
+    </div>
+    
+    </div>
+</div>
+                
+        
+    </div>
+</div> 
+	</div>
+    <script type="text/javascript" src="scripts/prettify.js"></script>
+    <script type="text/javascript" src="scripts/lang-css.js"></script>
+    <script type="text/javascript" src="scripts/doc.js"></script>
+    <script> prettyPrint(); </script>
+</body>
+</html>
+

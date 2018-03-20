@@ -3,11 +3,11 @@
  * 日期:2015-11-27
  * 描述: 时间轮询操作工具,例如:包含快速开启一个倒计时操作,以及开启一个计时器操作等等
  */
-var Base = require('../base/base.js');
-var Type = require('../base/type.js');
-var Strings = require('../base/string.js');
-var Arrays = require('../base/array.js');
-var EventEmitter = require('./emitter.js');
+var Base = require('./base.js');
+var Type = require('./type.js');
+var Strings = require('./string.js');
+var Arrays = require('./array.js');
+var EventEmitter = require('./event-emitter');
 
 var identifier = 0;
 
