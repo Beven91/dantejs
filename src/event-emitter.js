@@ -14,7 +14,6 @@
  *******************************************************/
 var Base = require('./base.js');
 var Type = require('./type.js');
-var Strings = require('./string.js');
 var Arrays = require('./array.js');
 
 /**
@@ -29,7 +28,7 @@ var Arrays = require('./array.js');
  *              emitter.emit('change',newValue,oldValue);
  */
 function EventEmitterLibraryClass() {
-    this.regHandlers = {};
+  this.regHandlers = {};
 }
 
 //继承于基础类
@@ -44,24 +43,24 @@ Base.driver(EventEmitterLibraryClass);
  * @param name 事件名称
  * @param handler 事件函数
  */
-EventEmitterLibraryClass.prototype.once = function(name, handler) {
-    if (Strings.isBlank(name)) {
-        return;
+EventEmitterLibraryClass.prototype.once = function (name, handler) {
+  if (!(name)) {
+    return;
+  }
+  if (!Type.isFunction(handler)) {
+    return;
+  }
+  var self = this;
+  var onceHandler = function () {
+    if (onceHandler.called) {
+      self.off(name, onceHandler);
+      handler = name = self = onceHandler = null;
+    } else {
+      onceHandler.called = true;
+      handler.apply(this, arguments);
     }
-    if (!Type.isFunction(handler)) {
-        return;
-    }
-    var self = this;
-    var onceHandler = function() {
-        if (onceHandler.called) {
-            self.off(name, onceHandler);
-            handler = name = self = onceHandler = null;
-        } else {
-            onceHandler.called = true;
-            handler.apply(this, arguments);
-        }
-    }
-    this.on(name, onceHandler);
+  }
+  this.on(name, onceHandler);
 }
 
 /**
@@ -69,14 +68,14 @@ EventEmitterLibraryClass.prototype.once = function(name, handler) {
  * @param name 事件名称
  * @param handler 事件处理函数
  */
-EventEmitterLibraryClass.prototype.on = function(name, handler) {
-    if (name === null || name === '') {
-        return;
-    }
-    var handlers = this.getListeners(name);
-    if (typeof handler == 'function') {
-        handlers.push(handler);
-    }
+EventEmitterLibraryClass.prototype.on = function (name, handler) {
+  if (name === null || name === '') {
+    return;
+  }
+  var handlers = this.getListeners(name);
+  if (typeof handler == 'function') {
+    handlers.push(handler);
+  }
 }
 
 /**
@@ -84,57 +83,68 @@ EventEmitterLibraryClass.prototype.on = function(name, handler) {
  * @param name 事件名称 
  * @param handler 事件处理函数 如果handler参数为null 则取消当前事件的所有已绑定的函数
  */
-EventEmitterLibraryClass.prototype.off = function(name, handler) {
-    var handlers = this.getListeners(name);
-    if (arguments.length === 1) {
-        handlers.length = 0;
-    } else {
-        Arrays.querySplice(handlers, function(h) {
-            return h === handler;
-        });
+EventEmitterLibraryClass.prototype.off = function (name, handler) {
+  var handlers = this.getListeners(name);
+  if (arguments.length === 1) {
+    handlers.length = 0;
+  } else {
+    for (var i = 0, k = handlers.length; i < k; i++) {
+      if (handler === handlers[i]) {
+        handlers[i] = null;
+      }
     }
+  }
 }
 
 /**
  * 名称：销毁事件容器
  */
-EventEmitterLibraryClass.prototype.destroy = function() {
-    var allHandlers = this.regHandlers || {};
-    for (var i in allHandlers) {
-        if (Type.isArray(allHandlers[i])) {
-            allHandlers[i].length = 0;
-        } else {
-            allHandlers[i] = null;
-        }
+EventEmitterLibraryClass.prototype.destroy = function () {
+  var allHandlers = this.regHandlers || {};
+  for (var i in allHandlers) {
+    if (Type.isArray(allHandlers[i])) {
+      allHandlers[i].length = 0;
+    } else {
+      allHandlers[i] = null;
     }
+  }
 }
 
 /**
  * 名称：获取指定事件的已注册的事件列表
  */
-EventEmitterLibraryClass.prototype.getListeners = function(name) {
-    if (name === null || name === "") {
-        return [];
-    }
-    var handlers = this.regHandlers[name];
-    if (handlers == null) {
-        handlers = this.regHandlers[name] = [];
-    }
-    return handlers;
+EventEmitterLibraryClass.prototype.getListeners = function (name) {
+  if (name === null || name === "") {
+    return [];
+  }
+  var handlers = this.regHandlers[name];
+  if (handlers == null) {
+    handlers = this.regHandlers[name] = [];
+  }
+  return handlers;
 }
 
 /**
  * 名称：执行指定事件
  */
-EventEmitterLibraryClass.prototype.emit = function(name, arg1, argN) {
-    var handlers = this.getListeners(name);
-    var args = Array.prototype.slice.call(arguments, 1);
-    var returnValue = null;
-    Arrays.each(handlers, function(handler) {
-        returnValue = handler.apply(global, args);
-        return returnValue;
-    });
-    return returnValue;
+EventEmitterLibraryClass.prototype.emit = function (name, arg1, argN) {
+  var handlers = this.getListeners(name);
+  var args = Array.prototype.slice.call(arguments, 1);
+  var returnValue = null;
+  var handlers2 = [];
+  for (var i = 0, k = handlers.length; i < k; i++) {
+    var handler = handlers[i];
+    if(handler){
+      handlers2.push(handler);
+      returnValue = handler.apply(global, args);
+      if (returnValue === false) {
+        break;
+      }
+    }
+  }
+  handlers.length = 0;
+  handlers.push.apply(handlers,handlers2);
+  return returnValue;
 }
 
 
