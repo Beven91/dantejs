@@ -31,5 +31,5 @@
     "doc": "watson-doc | browser-sync start --server ./docs/ --index ./index.html",
     "test": "mocha"
   },
-  "version": "2.0.2"
+  "version": "2.0.3"
 }
