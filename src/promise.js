@@ -4,7 +4,6 @@
  * 版本：0.0.1
  * 描述：定制Promise 使其兼容低版本浏览器
  *******************************************************/
-var Base = require('./base.js');
 var Type = require('./type.js');
 var Fn = require('./fn');
 var EventEmitter = require('./event-emitter');

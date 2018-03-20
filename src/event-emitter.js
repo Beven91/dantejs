@@ -14,7 +14,6 @@
  *******************************************************/
 var Base = require('./base.js');
 var Type = require('./type.js');
-var Arrays = require('./array.js');
 
 /**
  * 名称：事件容器构造函数
