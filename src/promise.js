@@ -68,15 +68,27 @@ PromiseA.prototype.reason = null;
 PromiseA.prototype.emitter = null;
 
 /**
- * 将thenable转换成PromiseA
+ * 返回一个resolve的promise
  * @param thenable 包含then函数对象
  */
 PromiseA.resolve = function(thenable) {
     if (thenable instanceof PromiseA) {
         return thenable;
     } else {
-        return convertThenable(thenable);
+        return convertThenable(thenable,STATUS.fulfilled);
     }
+}
+
+/**
+ * 返回一个reject的promise
+ * @param thenable 包含then函数对象
+ */
+PromiseA.reject = function(thenable) {
+  if (thenable instanceof PromiseA) {
+      return thenable;
+  } else {
+      return convertThenable(thenable,STATUS.rejected);
+  }
 }
 
 /**
@@ -330,9 +342,9 @@ function resolveThenable(promise, thenable, status) {
 /**
  * 将thenable 转换成PromiseA
  */
-function convertThenable(thenable) {
+function convertThenable(thenable,status) {
     var promise = new PromiseA(emptyResolver);
-    return resolveThenable(promise, thenable);
+    return resolveThenable(promise, thenable,status);
 }
 
 /**
