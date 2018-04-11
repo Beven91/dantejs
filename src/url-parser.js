@@ -106,7 +106,11 @@ UrlParserLibraryClass.prototype.toParamString = function(ignoreEmpty) {
         if (ignoreEmpty === true && Strings.isBlank(paras[i])) {
             continue;
         }
-        strArray.push(i + '=' + (paras[i]));
+        var value  = paras[i] || '';
+        if(/[\?|\&]/.test(value)){
+          value = encodeURIComponent(value);
+        }
+        strArray.push(i + '=' + value);
     }
     return '?' + strArray.join('&');
 }
