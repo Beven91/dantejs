@@ -48,7 +48,7 @@ CookieParser.prototype.removeCookie = function (name, path) {
  * @param expires 过期时间 可以是一个date类型，或者date类型的字符串
  * @param path cookie路径
  */
-CookieParser.prototype.setCookie = function (name, v, expires, path) {
+CookieParser.prototype.setCookie = function (name, v, expires, path, domain) {
   if (Strings.isBlank(name)) {
     return;
   }
@@ -57,10 +57,11 @@ CookieParser.prototype.setCookie = function (name, v, expires, path) {
   }
   name = Strings.trim(name)
   var cv = this.encode ? encodeURI(v) : v;
+  var dc = domain ? ';domain=' + domain : '';
   if (expires) {
-    window.document.cookie = Strings.format("{0}={1};expires={2};path={3}", name, cv, expires, (path || ""));
+    window.document.cookie = Strings.format("{0}={1};expires={2};path={3}" + dc, name, cv, expires, (path || ""));
   } else {
-    window.document.cookie = Strings.format("{0}={1};path={2}", name, cv, (path || ""));
+    window.document.cookie = Strings.format("{0}={1};path={2}" + dc, name, cv, (path || ""));
   }
   this[name] = v;
   this.__cookies[name.toLowerCase()] = v;
