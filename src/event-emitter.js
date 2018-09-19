@@ -129,7 +129,7 @@ EventEmitterLibraryClass.prototype.getListeners = function (name) {
 EventEmitterLibraryClass.prototype.emit = function (name, arg1, argN) {
   var handlers = this.getListeners(name);
   var args = Array.prototype.slice.call(arguments, 1);
-  var returnValue = null;
+  var returnValue = undefined;
   var handlers2 = [];
   for (var i = 0, k = handlers.length; i < k; i++) {
     var handler = handlers[i];
